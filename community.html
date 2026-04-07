@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Green Pulse</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  background: black;
+}
+
+/* ================= LEFT (GREEN STRIPES) ================= */
+
+.gp-left {
+  width: 50%;
+  background: url('https://images.unsplash.com/photo-1620121692029-d088224ddc74?q=80&w=1974&auto=format&fit=crop') center/cover no-repeat;
+}
+
+/* ================= RIGHT PANEL ================= */
+
+.gp-right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* DARK PURPLE GLASS */
+  background:
+    radial-gradient(circle at 30% 30%, rgba(140, 0, 255, 0.25), transparent 50%),
+    radial-gradient(circle at 70% 70%, rgba(255, 0, 150, 0.25), transparent 50%),
+    rgba(10, 0, 20, 0.85);
+
+  backdrop-filter: blur(25px);
+  position: relative;
+}
+
+/* divider line */
+.gp-right::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: rgba(255,255,255,0.1);
+}
+
+/* ================= FORM ================= */
+
+.gp-form {
+  width: 320px;
+  color: white;
+}
+
+.gp-form h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.gp-form p {
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+/* inputs */
+
+.gp-form label {
+  font-size: 12px;
+  color: #bbb;
+}
+
+.gp-form input {
+  width: 100%;
+  padding: 10px 5px;
+  margin-bottom: 25px;
+
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #555;
+  color: white;
+  outline: none;
+}
+
+.gp-form input::placeholder {
+  color: #777;
+}
+
+/* options row */
+
+.gp-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+.gp-options input {
+  margin-right: 5px;
+}
+
+.gp-options a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+/* ================= BUTTON ================= */
+
+.gp-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+
+  background: black;
+  color: white;
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+/* ================= FOOTER ================= */
+
+.gp-register {
+  margin-top: 15px;
+  font-size: 12px;
+  text-align: center;
+  color: #aaa;
+}
+
+.gp-register a {
+  color: white;
+  text-decoration: none;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  body {
+    flex-direction: column;
+  }
+
+  .gp-left {
+    height: 200px;
+    width: 100%;
+  }
+
+  .gp-right {
+    width: 100%;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- LEFT -->
+<div class="gp-left"></div>
+
+<!-- RIGHT -->
+<div class="gp-right">
+
+  <div class="gp-form">
+    <h1>Welcome back</h1>
+    <p>Please enter your details.</p>
+
+    <label>E-mail</label>
+    <input type="email" placeholder="Enter your e-mail">
+
+    <label>Password</label>
+    <input type="password" placeholder="••••••••">
+
+    <div class="gp-options">
+      <label><input type="checkbox"> Remember me</label>
+      <a href="#">Forgot the password?</a>
+    </div>
+
+    <button class="gp-btn"><a href="home.html" style="text-decoration: none; color: white;">Join the Community</a></button>
+
+    <div class="gp-register">
+      Don’t have an account? <a href="#">Register here</a>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
